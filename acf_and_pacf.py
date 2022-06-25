@@ -10,7 +10,7 @@ from statsmodels.graphics.tsaplots import plot_acf, plot_pacf
 price_data = pd.read_csv('data/price-data.csv')
 
 # 绘制acf图
-plot_acf(price_data)
+plot_acf(price_data, lags=200)
 plt.show()
 
 # 通过设置不同的nlags,来验证自相关系数中的均值是根据全序列求得的
